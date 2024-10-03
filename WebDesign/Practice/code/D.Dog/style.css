@@ -1,0 +1,23 @@
+.heading
+{
+    background-color: #357b9991;
+    font-size: 32px;
+    color: #0000ff9c;
+    font: bold;
+}
+.highlight
+{
+    color: #4f42b5;
+}
+th, td, table
+{
+    padding: none;
+    border-spacing: 0px;
+}
+img
+{
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    float:right;
+}

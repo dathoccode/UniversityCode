@@ -1,0 +1,59 @@
+body
+{
+    background-image: linear-gradient(rgb(189, 73, 189), white);
+    background-repeat: no-repeat;
+}
+.container
+{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+}
+.header h1
+{
+    margin-top: 0%;
+}
+.header
+{
+    padding: 10px;
+}
+
+.block
+{
+    padding: 10px;
+    position:relative;
+}
+.title
+{
+    background-color: rgb(130, 200, 237);
+    line-height: 40px;
+    font-size: 25px;
+}
+.highlighted
+{
+    color: #1034c5;
+}
+
+.image
+{
+    position : absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 300px;
+}
+
+.tableinfor
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.tablestyle1
+{
+    color: #112d9edc;
+}
+.tablestyle2
+{
+    color: #1875d8dc;
+}
