@@ -82,6 +82,7 @@ article p::first-letter
 article p
 {
     text-align: justify;
+
 }
 
 main article:nth-of-type(2)
@@ -128,11 +129,7 @@ article p:last-of-type span:first-of-type a::before
     top: 8px;
     right: 4px;
 }
-main article p:last-of-type
-{
-    position: relative;
-    bot: 0px;
-}
+
 
 
 .home, ul li:last-of-type

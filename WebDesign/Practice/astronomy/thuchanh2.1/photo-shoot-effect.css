@@ -1,104 +1,111 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
 body
 {
-    height: 960px;
-    align-self: center;
+    width: 85%;
     font-family: Arial, sans-serif;
     color: #fcfcfc;
     background-color: #355664;
+    margin: auto;
 }
-header
+
+header h1, h2, h3
 {
-    font-family: Arial, sans-serif;
+    font-family: forte, Arial, sans-serif;
+    padding: 10px 0;
 }
-h1
+header h1
 {
-    font-size: 50px;
-    padding: 10px 0 0;
+    font-size: 70px;
     text-align: center;
+    
 }
-h2
+
+header h3
 {
-    font-size: 40px;
-    text-align: center;
-    border-bottom: 3px solid #416371;
-    padding-bottom: 20px;
-    letter-spacing: 15px;
-    margin-bottom: 0px;
-}
-h3
-{
+    font-size: 30px;
     text-align: right;
-    font-size: 30px;
-    font-weight: normal;
-    margin: 0 0 10px
-}
-p:nth-of-type(1)
-{
-    line-height: 20px;
-    padding-bottom: 5px;
-    color: #94c258;
-}
-img
-{
-    height: 300px;
-    width: 500px;
-    border: none;
-}
-div.article-content
-{
-    margin: 15px 0;
 }
 
+nav ul
+{
+    list-style-type: none;
+    padding-bottom: 10px;
+}
 
-nav
+nav li
 {
-    background-color: #355664;
-    padding: 0 5px 0 5px;
+    display: inline-block;
+    padding: 0 5px;
 }
-a
-{
-    margin: 5px 2px;
-    padding: 7px 10px 4px;
-    font-size: 30px;
-}
-li:nth-of-type(1) a
-{
-    color: #7CB3E9;   
-}
-li:nth-of-type(2) a
+
+nav a
 {
     color: #ffffff;
+    font-size: 24px;
+    text-transform: uppercase;
 }
-li:nth-of-type(3) a
+
+nav li:nth-child(1) a
+{
+    text-transform: lowercase;
+    color: #7CB3E9;;
+}
+nav a[title="sweet tabs"]
 {
     color: #8EC45B;
 }
 
-article
+main article
 {
     background-color: #213e4a;
-    padding: 20px;
-    margin: 0 0 10px;
-    display: flex;
-    flex-direction: column;
+    border-radius: 10px;
+    overflow: auto;
+    padding: 10px 20px;
 }
-li
+
+article h2
 {
-    display: inline;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 10px;
 }
-figure
+
+article figure
 {
-    border: 3px solid #142830;
+    width: 50%;
     float: right;
-    height: 300px;
-    width: 500px;
-    margin-left: 15px;
 }
+
+article img
+{
+    width: 100%;
+    border-radius: 10px;
+}
+
+div p:first-of-type
+{
+    line-height: 20px;
+    color: #94c258;
+    padding-bottom: 5px;
+}
+
+div.article-content
+{
+    border-top: 3px solid #416371;
+    padding-top: 15px;
+}
+
 footer
 {
-    border-top: 3px solid #142830;
+    margin-top: 10px;
     padding-top: 15px;
-    margin-bottom: 30px;
+    border-top: 3px solid #142830;
+    clear: both;
     text-align: center;
     font-size: 20px;
 }
