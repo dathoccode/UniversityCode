@@ -1,33 +1,33 @@
 #include <iostream> 
 #include <list>
+#include <vector>
 
 using namespace std;
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int n, k; 
     cin >> n >> k;
-    int a[n];
+    list<pair<int, int>> lst;
+    int x;
     for(int i = 0; i < n; i++)
     {
-        cin >> a[i];
-    }
-    list<int> lst;
-    int res = 0;
-    for(int i = 0; i < k; i++)
-    {
-        if(res < a[i]) res = a[i]; 
-    }
-    lst.push_back(res);
-    for(int i = k; i < n; i++)
-    {
-        if(a[i-k+1] == res) 
+        cin >> x;
+        while(!lst.empty() && lst.back().second <= x)
         {
-            for(int j = i - k + 2; j < i + 2; j++) res = res<a[j]?a[j]:res;
+            lst.pop_back();
         }
-        if(res < a[i]) res = a[i];
-        lst.push_back(res);
+        lst.push_back({i, x});
+        if(i >= k - 1)
+        {
+            while(lst.front().first <= i - k)
+            {
+                lst.pop_front();
+            }
+            cout << lst.front().second << " ";
+        }
     }
 
-    for(auto it = lst.begin(); it != lst.end(); it++) cout << *it << " ";
     return 0;
 }

@@ -2,6 +2,7 @@
 {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body
 {
@@ -34,7 +35,9 @@ nav ul
 {
     list-style-type: none;
     padding-bottom: 10px;
+    text-align: right;
 }
+
 
 nav li
 {
@@ -52,11 +55,12 @@ nav a
 nav li:nth-child(1) a
 {
     text-transform: lowercase;
-    color: #7CB3E9;;
+    color: #7CB3E9;
 }
 nav a[title="sweet tabs"]
 {
     color: #8EC45B;
+    text-transform: capitalize;
 }
 
 main article
@@ -98,6 +102,12 @@ div.article-content
 {
     border-top: 3px solid #416371;
     padding-top: 15px;
+}
+
+div.article-content p
+{
+    width: 50%;
+    padding-right: 20px;
 }
 
 footer

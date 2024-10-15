@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a
@@ -112,8 +114,7 @@ span a
 
 footer
 {
-    margin:0px;
-    padding:10px 0 10px 0;
+    padding:10px 0;
     text-align: center;
 }
 h2
@@ -135,4 +136,9 @@ article p:last-of-type span:first-of-type a::before
 .home, ul li:last-of-type
 {
     font-weight: bold;
+}
+
+h3 a
+{
+    color: blue;
 }
