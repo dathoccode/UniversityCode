@@ -18,14 +18,14 @@ public:
     }
     friend istream &operator >>(istream &in, Phone &ph)
     {
-        cout << "nhap id san pham: ";
+        cout << "Nhap id san pham: ";
         in.ignore(1);
         getline(in, ph.id_);
-        cout << "nhap thuong hieu: ";
+        cout << "Nhap thuong hieu: ";
         in >> ph.brand_;
-        cout << "nhap nam san xuat: ";
+        cout << "Nhap nam san xuat: ";
         in >> ph.year_;
-        cout << "nhap gia(VND): ";
+        cout << "Nhap gia(VND): ";
         in >> ph.price_;
         return in;
     }
@@ -35,7 +35,7 @@ public:
         return out;
     }
     string getId(){return id_;}
-    friend bool operator< (Phone p1, Phone p2)
+    friend bool operator < (Phone p1, Phone p2)
     {
         return p1.price_ < p2.price_;
     }
@@ -55,7 +55,7 @@ public:
     void enter()
     {
         int n;
-        cout << "nhap so phan tu: ";
+        cout << "Nhap so phan tu: ";
         cin >> n;
         for(int i = 0; i < n; i++)
         {
@@ -90,18 +90,15 @@ public:
     }
     Phone find(string id)
     {
+        Phone tmp("null", "null", 0, 0);
         for(auto p: lst)
         {
             if(p.getId() == id) 
             {
-                cout << p.getId();
-                return p;,,,,,,,,,,,,,,,,,,,,,,
-
-                ,
-
+                return p;
             }
         }
-        
+        return tmp; 
     }
 
 };
@@ -118,12 +115,12 @@ public:
         Phone tmp;
         string s;
         switch(n)
-        {k
-      case 1:
+        {
+        case 1:
             lst.enter();
             break;
         case 2:
-            cout << "danh sach: " << endl;
+            cout << "Danh sach: " << endl;
             lst.print();
             break;
         case 3:
@@ -131,13 +128,23 @@ public:
             lst.add(tmp);
             break;
         case 4:
-            cout << "nhap id dien thoai muon xoa: ";
+            cout << "Nhap id dien thoai muon xoa: ";
             cin >> s;
             lst.remove(lst.find(s));
         case 5:
-            cout << "nhap id dien thoai muon tim: ";
-            cin >> s;
-            cout << lst.find(s);
+            cout << "Nhap id dien thoai muon tim: ";
+            cin.ignore(1);
+            getline(cin, s);
+            tmp = lst.find(s);
+            if(tmp.getId() != "null")
+            {
+                cout << lst.find(s);
+            }
+            else
+            {
+                cout << "Khong tim thay dien thoai." << endl;
+            }
+            
             break;
         default:
             return;
